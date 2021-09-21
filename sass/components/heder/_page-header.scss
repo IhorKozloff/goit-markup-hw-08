@@ -1,0 +1,15 @@
+header {
+    border-bottom: 1px solid #ECECEC;    
+}
+.header-container {
+    display: flex;
+    padding-bottom: 0;
+}
+
+.header__logo {
+    margin-right: 95px;
+    margin-top: 25px;
+    & span {
+        color: black;  
+    }
+}

@@ -1,0 +1,140 @@
+.modal-window__form-tittle {
+    @include txt-p (20px, 1.1, bold);
+    text-align: center;
+}
+.user-blank {
+    width: 450px; 
+    margin: 12px auto 0 auto;
+}
+.user-blank__wrapper {
+    display: block;
+    
+}
+.user-blank__item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &:not(:first-child) {
+        margin-top: 10px;
+    }
+}
+
+
+
+.user-blank__label {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: #757575;
+}
+.user-blank__input {
+    border: 1px solid ;
+    border-color: rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    margin-top: 4px;
+    height: 40px;
+    @include anim-p (border-color);
+    padding-left: 42px;
+    &:hover, &:focus {
+        cursor: pointer;
+        border-color: #2196F3;
+        outline: none;
+    }
+    &:hover + .user-blank__icon,
+    &:focus + .user-blank__icon  {
+        fill: #2196F3;
+    }
+    
+}
+.user-blank__coment {    
+    width: 100%;    
+    height: 100%;
+    border: 1px solid ;
+    border-color: rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    margin-top: 4px;
+    resize: none;
+    @include anim-p (border-color);
+    &::placeholder {
+        font-size: 14px;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+    }
+    &:hover, &:focus {
+        cursor: pointer;
+        border-color: #2196F3;
+        outline: none;
+    }
+}
+.user-blank__icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    @include anim-p (fill);
+    pointer-events: none;
+}
+
+.user-blank__chekbox-wrapper {
+    margin-top: 20px;
+   @include dfcc;
+}
+
+.user-blank__checkbox-icon {
+    display: block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid #212121;
+    border-radius: 2px;
+    background: #fff;
+    @include anim-p (border-color);
+    &:hover {
+        border-color: #2196F3;
+    } 
+}
+
+.user-blank__checkbox-link {
+    color: #2196F3;
+       
+}
+
+.user-blank__checkbox {
+    appearance: none;
+    position: absolute;
+    &:checked + .user-blank__checkbox-icon {
+        border-color: #2196F3;
+        background-image: url(.././images/agree-vector.svg);
+        background-color: #2196F3;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-origin: border-box;
+     
+    } 
+
+} 
+
+
+
+
+
+
+.user-blank__checkbox-txt {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #757575;
+    margin-left: 9px;
+}
+
+.user-blank__checkbox-link-wrapper {
+    position: relative;
+    margin-left: 3px;
+}
+.user-blank__checkbox-link-wrapper::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #2196F3;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: translateY(-3px);
+} 

@@ -1,0 +1,65 @@
+.logo {
+    font-family: 'Raleway';
+    @include txt-p (26px, 1.2, bold); 
+    color: #2196F3;
+}
+.btn {
+    @include dfcc;
+    width: 200px;
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    background-color: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: 1px solid;
+    border-color: #59a0da;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+   
+    &:hover, &:focus  {
+        border-color:#fff;
+        cursor: pointer;
+        background-color: #da5979;
+    }   
+     
+    &:active {
+        border:2px solid rgb(255, 255, 255);
+        color:#000;
+        background-color: #eb033d;
+        font-weight: bolder;
+    }         
+}
+
+
+
+.social-contacts-set{
+    display: flex;
+    justify-content: center;
+    
+}
+.social-contacts__item:not(:last-child) {
+    margin-right: 10px; 
+}  
+.social-contacts-set__link {
+    width: 44px;
+    height: 44px;
+    // background-color: auto;
+    @include dfcc;
+    border-radius: 22px;
+    @include anim-p(background-color);
+    &:hover, &:focus {
+        background-color: #2196F3;
+    }
+    &:hover .team-icon,
+    &:focus .team-icon {
+        fill: #fff;  
+    }
+    
+}
+.social-contacts__icon {
+    fill: auto;
+    @include anim-p(fill); 
+}
+
+ 
+

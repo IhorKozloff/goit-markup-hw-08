@@ -1,0 +1,46 @@
+.footer-container__subscribe {
+    color: #fff;
+    fill: #FFFFFF;
+    padding-top: 12px;
+}
+.subscribe-form {
+    display: flex;
+    align-items: center;
+}
+.subscribe-form__elements {
+    position: relative;
+}
+
+.subscribe-form__input {
+    width: 360px;
+        height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    margin-right: 12px;
+    background-color: #2F303A;
+    color: #fff;
+    &:focus + .subscribe-form__label,
+    &:not(:placeholder-shown) + .subscribe-form__label {
+    opacity: 0;
+    
+}
+    
+}
+.subscribe-form__label {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    color: #ACACB0;
+    transform: translateY(-50%);
+    opacity: 1;
+    @include anim-p (opacity);
+    
+
+}
+
+.footer-container {
+    .btn__icon {
+        margin-left: 10px;
+    } 
+}
