@@ -1,14 +1,11 @@
-.skills__item:not(:last-child) {
-    margin-right: 30px;
-} 
-.skills__icon-place-wrapper {
+.block-skill__icon-place-wrapper {
     height: 120px;
     background: #F5F4FA; 
     @include dfcc;
 }
 
 
-.skills__item-text{
+.block-skill__text{
     font-size: 14px;
     line-height: 1.7;
     color: #757575;

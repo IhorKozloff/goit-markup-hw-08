@@ -1,0 +1,26 @@
+.social-contacts-set{
+    display: flex;
+    justify-content: center;
+    & li:not(:last-child) {
+        margin-right: 10px; 
+    }  
+}
+
+.social-contacts-set__link {
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+    @include dfcc;
+    @include anim-p(background-color);
+    &:hover, &:focus {
+        background-color: #2196F3;
+    }
+    &:hover .social-contacts-set__icon,
+    &:focus .social-contacts-set__icon {
+        fill: #fff;  
+    }
+}
+.social-contacts-set__icon {
+    fill: auto;
+    @include anim-p(fill); 
+}

@@ -1,0 +1,14 @@
+.logo {
+    font-family: 'Raleway';
+    @include txt-p (26px, 1.2, bold); 
+    color: #2196F3;
+}
+
+
+// .busines__item {
+//     position: relative;
+//     &:not(:last-child) {
+//         margin-right: 30px;
+//     } 
+// }
+

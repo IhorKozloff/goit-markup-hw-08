@@ -1,9 +1,4 @@
-.clients {
-    justify-content: space-between;
-}
-
-
-.clients__link {
+.block-clients__link {
     border: 1px solid ;
     border-color: #AFB1B8;
     border-radius: 4px;  
@@ -15,17 +10,14 @@
     &:hover, &:focus {
         border-color: #2196F3;
     }
-    &:hover .clients__icon,
-    &:focus .clients__icon {
+    &:hover .block-clients__icon,
+    &:focus .block-clients__icon {
         fill: #2196F3;
     }
 }
-.clients__icon {
+.block-clients__icon {
     width: 106px;
     height: 60px;
     fill: auto;
     @include anim-p (fill);
 }
-
-
-

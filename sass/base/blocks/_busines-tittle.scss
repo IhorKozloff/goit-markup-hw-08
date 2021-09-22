@@ -1,0 +1,13 @@
+.block-busines-tittle{
+    color: #fff;
+    background-color: rgba(47, 48, 58, 0.8);
+    @include dfcc;
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    & h3 {
+        margin-top: 0;
+    }
+}
