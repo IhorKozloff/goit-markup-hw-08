@@ -1,0 +1,40 @@
+footer {
+    padding: 60px 0;
+   
+}
+.footer__contacts-wrapper {
+    margin-bottom: 60px;
+}
+.footer__logo {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.footer__logo--half-light {
+    & span {
+        color: #fff;
+    }
+}
+
+.contacts-list {
+    
+    & li {
+        text-align: center;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 1.2;
+        
+    }
+    & li:not(:last-child) {
+        margin-bottom: 8px;
+    }
+    & li:not(:first-child) {
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+.contacts-list__element--light {
+    color: #fff;
+}
+
+
+

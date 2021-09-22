@@ -1,17 +1,18 @@
-.block-team__photo {
-    width: 270px;
-    height: 260px;
-    
+.team__photo {
+    width: 450px;
+    height: 460px;
+
 }
 
-.block-team__info-wrapper {
+
+.team__info-wrapper {
     padding: 30px 0;
-    .block-team__name {
+    .team__name {
         @include txt-p(16px, 1.2, 500);
         text-align: center;
         margin-bottom: 10px;
     }
-    .block-team__position {
+    .team__position {
         font-size: 16px;
         line-height: 1.2;
         text-align: center;

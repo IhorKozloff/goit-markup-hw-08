@@ -1,4 +1,5 @@
 @import './utils/mixin';
+@import './utils/vars';
 @import './base/specification';
 @import './base/blocks/logo';
 @import './base/blocks/busines-tittle';
@@ -7,6 +8,11 @@
 @import './base/blocks/gallary-card';
 @import './base/blocks/icon-set';
 @import './base/blocks/main-btn';
-@import './base/blocks/skills';
 @import './base/blocks/tab';
 @import './base/blocks/team';
+@import './components/heder';
+@import './components/hero';
+@import './components/section-skills';
+@import './components/section-team';
+@import './components/companies-logo-section';
+@import './components/footer';

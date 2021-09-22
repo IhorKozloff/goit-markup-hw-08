@@ -1,0 +1,8 @@
+.clients {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+        & li:not(:nth-child(n + 4)) {
+            margin-bottom: 30px;
+        }
+}

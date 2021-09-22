@@ -20,11 +20,18 @@
 </head>
 
 <body>
+    
     <header>
-        <div class="container header-container">
-            <a href="#" class="header__logo logo">Web<span>Studio</span></a>
+        <div class="container header__container">
+            <a href="#" class="logo header__logo header__logo--half-black">Web<span>Studio</span></a>
+            <button type="button" class="header__burger-menu-btn">
+                <svg class="header__burger-menu-icon" width="40" height="40">
+                    <use href="./images/sprite.svg#icon-burger"></use>
+                </svg>
+            </button>   
+            
 
-            <nav>
+            <!-- <nav>
                 <ul class="navigation">
                     <li class="navigation-item active">
                         <a href="#" class="navigation-item-content active">
@@ -62,16 +69,19 @@
                         +38 096 111 11 11
                     </a>
                 </li>
-            </ul>
+            </ul> -->
         </div>
+    
     </header>
 
 
-    <section class="section hero">
-        <div class="container">
+
+
+    <section class="hero">
+        <div class="container hero__container">
             <h1>Эффективные решения<br> для вашего бизнеса</h1>
-            <button data-modal-open class="btn btn-centered" type="button">Заказать услугу</button>
-            <div data-modal class="backdrop is-hidden">
+            <button data-modal-open class="btn hero__btn" type="button">Заказать услугу</button>
+            <!-- <div data-modal class="backdrop is-hidden">
                 <div class="modal-window">
                     <button data-modal-close type="button" class="modal-window__close-btn">
                         <svg class="modal-window__close-icon" width="11" height="11">
@@ -130,15 +140,15 @@
                         </div>
 
                         <button type="submit" class="btn btn-centered">Отправить</button>
-                    </form>
+                    </form> 
 
                     
                 </div>
-            </div>
+            </div>-->
         </div>
     </section>
 
-    <section class="section">
+    <section>
         <div class="container">
             <ul class="skills">
                 <li class="skills__item">
@@ -148,7 +158,7 @@
                         </svg>
                     </div>
                     <h3>Внимание к деталям</h3>
-                    <p class="skills__item-text">
+                    <p class="skills__text">
                         Идейные соображения, а также начало повседневной работы по формированию позиции.
                     </p>
                 </li>
@@ -159,7 +169,7 @@
                         </svg>
                     </div>
                     <h3>Пунктуальность</h3>
-                    <p class="skills__item-text">
+                    <p class="skills__text">
                         Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
                     </p>
                 </li>
@@ -170,7 +180,7 @@
                         </svg>
                     </div>
                     <h3>Планирование</h3>
-                    <p class="skills__item-text">
+                    <p class="skills__text">
                         Равным образом консультация с широким активом в значительной степени обуславливает.
                     </p>
                 </li>
@@ -181,7 +191,7 @@
                         </svg>
                     </div>
                     <h3>Современные технологии</h3>
-                    <p class="skills__item-text">
+                    <p class="skills__text">
                         Значимость этих проблем настолько очевидна, что реализация плановых заданий.
                     </p>
                 </li>
@@ -189,7 +199,7 @@
         </div>
     </section>
 
-    <section class="section section-busines">
+    <!-- <section class="section-busines">
         <div class="container">
 
             <h2>Чем мы занимаемся</h2>
@@ -216,17 +226,17 @@
             </ul>
 
         </div>
-    </section>
+    </section> -->
 
-    <section class="section" style="background: #F5F4FA;">
+    <section style="background: #F5F4FA;">
         <div class="container">
             <h2>Наша команда</h2>
             <ul class="team">
-                <li class="team-item">
-                    <img src="./images/img.jpg" alt="мужчина_в_очках_дизайнер" class="team-item__photo">
-                    <div class="team-item__wrapper">
-                        <p class="team-item__name">Игорь Демьяненко</p>
-                        <p class="team-item__position">Product Designer</p>
+                <li>
+                    <img src="./images/img-3.jpg" alt="мужчина_в_очках_дизайнер" class="team__photo">
+                    <div class="team__info-wrapper">
+                        <p class="team__name">Игорь Демьяненко</p>
+                        <p class="team__position">Product Designer</p>
                         <ul class="social-contacts-set">
                             <li>
                                 <a href="instagram.com" class="social-contacts-set__link">
@@ -260,10 +270,47 @@
                     </div>
                 </li>
                 <li class="team-item">
-                    <img src="./images/img-2.jpg" alt="мужчина_фронтэнд_разработчик" class="team-item__photo">
-                    <div class="team-item__wrapper">
-                        <p class="team-item__name">Николай Тарасов</p>
-                        <p class="team-item__position">Marketing</p>
+                    <img src="./images/img-1.jpg" alt="женщина_в_очках_маркетолог" class="team__photo">
+                    <div class="team__info-wrapper">
+                        <p class="team__name">Ольга Репина</p>
+                        <p class="team__position">Frontend Developer</p>
+                        <ul class="social-contacts-set">
+                            <li>
+                                <a href="instagram.com" class="social-contacts-set__link">
+                                    <svg class="social-contacts-set__icon" width="20" height="20">
+                                        <use href="./images/sprite.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="twitter.com" class="social-contacts-set__link">
+                                    <svg class="social-contacts-set__icon" width="20" height="20">
+                                        <use href="./images/sprite.svg#icon-twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="facebook.com" class="social-contacts-set__link">
+                                    <svg class="social-contacts-set__icon" width="20" height="20">
+                                        <use href="./images/sprite.svg#icon-facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="linkedin.com" class="social-contacts-set__link">
+                                    <svg class="social-contacts-set__icon" width="20" height="20">
+                                        <use href="./images/sprite.svg#icon-linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="team-item">
+                    <img src="./images/img-2.jpg" alt="мужчина_фронтэнд_разработчик" class="team__photo">
+                    <div class="team__info-wrapper">
+                        <p class="team__name">Николай Тарасов</p>
+                        <p class="team__position">Marketing</p>
                         <ul class="social-contacts-set">
                             <li>
                                 <a href="instagram.com" class="social-contacts-set__link">
@@ -297,49 +344,13 @@
                     </div>
                 </li>
 
-                <li class="team-item">
-                    <img src="./images/img-1.jpg" alt="женщина_в_очках_маркетолог" class="team-item__photo">
-                    <div class="team-item__wrapper">
-                        <p class="team-item__name">Ольга Репина</p>
-                        <p class="team-item__position">Frontend Developer</p>
-                        <ul class="social-contacts-set">
-                            <li>
-                                <a href="instagram.com" class="social-contacts-set__link">
-                                    <svg class="social-contacts-set__icon" width="20" height="20">
-                                        <use href="./images/sprite.svg#icon-instagram"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="twitter.com" class="social-contacts-set__link">
-                                    <svg class="social-contacts-set__icon" width="20" height="20">
-                                        <use href="./images/sprite.svg#icon-twitter"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="facebook.com" class="social-contacts-set__link">
-                                    <svg class="social-contacts-set__icon" width="20" height="20">
-                                        <use href="./images/sprite.svg#icon-facebook"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="linkedin.com" class="social-contacts-set__link">
-                                    <svg class="social-contacts-set__icon" width="20" height="20">
-                                        <use href="./images/sprite.svg#icon-linkedin"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
+                
 
                 <li class="team-item">
-                    <img src="./images/img-3.jpg" alt="мужчина_в_очках_продактдизайнер" class="team-item__photo">
-                    <div class="team-item__wrapper">
-                        <P class="team-item__name">Михаил Ермаков</P>
-                        <p class="team-item__position">UI Designer</p>
+                    <img src="./images/img.jpg" alt="мужчина_в_очках_продактдизайнер" class="team__photo">
+                    <div class="team__info-wrapper">
+                        <P class="team__name">Михаил Ермаков</P>
+                        <p class="team__position">UI Designer</p>
                         <ul class="social-contacts-set">
                             <li>
                                 <a href="instagram.com" class="social-contacts-set__link">
@@ -429,9 +440,9 @@
     </section>
 
     <footer>
-        <div class="container footer-container">
-            <div class="footer-container__contacts-wrapper">
-                <a href="#" class="logo footer-container__logo">Web<span>Studio</span></a>
+        <div class="container">
+            <div class="footer__contacts-wrapper">
+                <a href="#" class="logo footer__logo footer__logo--half-light">Web<span>Studio</span></a>
                 <address>
                     <ul class="contacts-list">
                         <li class="contacts-list__element contacts-list__element--light">г. Киев, пр-т Леси Украинки, 26</li>
