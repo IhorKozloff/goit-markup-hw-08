@@ -19,24 +19,44 @@ footer {
     color: #fff;    
 }
 .contacts-list {
-    
-    & li {
+    text-align: center;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.2;
+    & li a {
         text-align: center;
         font-style: normal;
         font-size: 14px;
         line-height: 1.2;
+        color: rgba(255, 255, 255, 0.6);
         
     }
     & li:not(:last-child) {
         margin-bottom: 8px;
     }
-    & li:not(:first-child) {
-        color: rgba(255, 255, 255, 0.6);
-    }
+    
+        
+    
 }
+
 .contacts-list__element--light {
     color: #fff;
 }
+
+
+
+.footer__tittle {
+    color: #fff;
+}
+.social-contacts-set__link--backgroundlight {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.social-contacts-set__icon--color-light {
+  fill: #fff;  
+}
+
+
+
 
 .subscribe-form__elements {
     position: relative;

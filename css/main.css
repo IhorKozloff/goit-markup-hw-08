@@ -715,6 +715,10 @@ header {
   margin-top: 10px;
 }
 
+.social-contacts-set__icon--grey-color {
+  fill: #AFB1B8;
+}
+
 .clients {
   display: flex;
   flex-flow: row wrap;
@@ -749,23 +753,39 @@ footer .footer__contacts-social-links {
   color: #fff;
 }
 
-.contacts-list li {
+.contacts-list {
   text-align: center;
   font-style: normal;
   font-size: 14px;
   line-height: 1.2;
 }
 
+.contacts-list li a {
+  text-align: center;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.6);
+}
+
 .contacts-list li:not(:last-child) {
   margin-bottom: 8px;
 }
 
-.contacts-list li:not(:first-child) {
-  color: rgba(255, 255, 255, 0.6);
-}
-
 .contacts-list__element--light {
   color: #fff;
+}
+
+.footer__tittle {
+  color: #fff;
+}
+
+.social-contacts-set__link--backgroundlight {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-contacts-set__icon--color-light {
+  fill: #fff;
 }
 
 .subscribe-form__elements {
