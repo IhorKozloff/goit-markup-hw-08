@@ -1,0 +1,80 @@
+.contacts-menu {
+    padding: 48px 25px;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    background-color: #fff;
+    transform: translateX(-50%);
+    @include anim-p (transform);
+    z-index: 1;
+    
+}
+
+.navigation__item:not(:first-child) {
+    margin-top: 38px;
+}
+.navigation__link {
+    @include txt-p (40px, 1.17);
+    letter-spacing: 0.02em;
+    @include anim-p (color);
+    &:hover, &:focus {
+        color: $Aqua-color;
+    }
+}
+.navigation__link--active {
+    color: $Aqua-color;
+}
+
+
+
+.contacts {
+    margin-top: 302px;
+    .contacts__item:not(:first-child) {
+        margin-top: 32px;
+    }
+    
+}
+.contacts__link {
+    letter-spacing: 0.02em;
+    color: $Aqua-color;
+}
+.contacts__link--fw24px{
+    @include txt-p (24px, 1.16);
+}
+.contacts__link--colorSilver{
+    color: #757575;
+
+}
+.contacts__link--fw34px {
+    @include txt-p (34px, 1.17);
+}
+.contacts__link--fw18px {
+    @include txt-p (18px, 1.22);
+}
+
+
+
+.social-links {
+    margin-top: 64px;
+    display: flex;
+    & li {
+        padding-right: 10px;
+        margin-right: 10px;
+    }
+    & li:not(:last-child) {
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+}
+.contacts-menu__close-btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 15px;
+    & .contacts-menu__close-icon {
+        @include anim-p (fill);
+    }
+    &:hover .contacts-menu__close-icon {
+        fill: $Aqua-color;
+    }
+}

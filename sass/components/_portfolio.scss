@@ -1,0 +1,17 @@
+.tabs {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    & li:not(:last-child) {
+        margin-right: 8px;
+    }
+    & li:nth-child(n + 4) {
+        margin-top: 10px;
+    }
+}
+.galarry {
+    margin-top: 40px;
+    & li:not(:first-child) {
+        margin-top: 30px;
+    }
+}

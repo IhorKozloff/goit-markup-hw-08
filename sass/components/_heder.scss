@@ -1,20 +1,47 @@
 header {
     width: 480px;
     margin: auto;
+    border-bottom:1px solid #ECECEC;
 }
 .header__container {
     padding: 10px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
     
 }
 .header__burger-menu-btn {
     width: 40px;
     height: 40px;
+    &:hover .header__burger-menu-icon{
+        fill: $Aqua-color;
+        cursor: pointer;
+    }
 }
-.header__logo--half-black {
-  & span {
-      color: $Dark-color;
-  }  
+.logo__span--dark {
+    color: $Dark-color;
 }
+
+.menu-overlay{
+    position: fixed;
+    background: rgba(47, 48, 58, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    @include anim-p (opacity);
+    z-index: 1;
+    pointer-events: none;
+    
+}
+
+.menu-overlay.invisible  {
+    &  .contacts-menu{
+        transform: translateX(50%);
+        }
+    opacity: 1;
+    pointer-events: inherit;
+}
+
