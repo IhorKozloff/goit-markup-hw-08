@@ -35,16 +35,19 @@
     
 }
 .contacts__link {
+    &:hover, &:focus {
+        color: $Aqua-color; 
+    }
+    @include anim-p (color);
     letter-spacing: 0.02em;
-    color: $Aqua-color;
+    color: #757575;;
 }
 .contacts__link--fw24px{
     @include txt-p (24px, 1.16);
 }
-.contacts__link--colorSilver{
-    color: #757575;
 
-}
+
+
 .contacts__link--fw34px {
     @include txt-p (34px, 1.17);
 }
