@@ -44,4 +44,15 @@ header {
     opacity: 1;
     pointer-events: inherit;
 }
+@media screen and (min-width: 768px) {
+    .menu-overlay {
+        opacity: 1;
+        position: static;
+        z-index: 0;
+        pointer-events: inherit;
+    }
+    .header__burger-menu-btn {
+        display: none;
+    }
+}
 

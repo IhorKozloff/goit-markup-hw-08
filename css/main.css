@@ -553,6 +553,18 @@ header {
   transform: translateX(50%);
 }
 
+@media screen and (min-width: 768px) {
+  .menu-overlay {
+    opacity: 1;
+    position: static;
+    z-index: 0;
+    pointer-events: inherit;
+  }
+  .header__burger-menu-btn {
+    display: none;
+  }
+}
+
 .contacts-menu {
   padding: 48px 25px;
   position: absolute;
@@ -564,6 +576,56 @@ header {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1;
+}
+
+.contacts {
+  margin-top: 302px;
+}
+
+.contacts .contacts__item:not(:first-child) {
+  margin-top: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts-menu, .navigation, .contacts {
+    display: flex;
+  }
+  .contacts-menu {
+    position: static;
+    z-index: 0;
+    transform: translateX(0);
+    justify-content: space-between;
+    background-color: aqua;
+  }
+  .contacts-menu .contacts-menu__close-btn, .contacts-menu .social-links {
+    display: none;
+  }
+  .navigation .navigation__item:not(:first-child) {
+    margin-top: 0;
+  }
+  .navigation .navigation__link {
+    font-size: 14px;
+    line-height: 1.17;
+    font-weight: 500;
+    color: brown;
+  }
+  .contacts {
+    background-color: brown;
+    margin-top: 0px;
+  }
+  .contacts .contacts__link--fz12-34px {
+    font-size: 12px;
+    line-height: 1.17;
+    font-weight: 500;
+  }
+  .contacts .contacts__link--fz12-24px {
+    font-size: 12px;
+    line-height: 1.17;
+    font-weight: 500;
+  }
+  .contacts .contacts__item:not(:first-child) {
+    margin-top: 0px;
+  }
 }
 
 .navigation__item:not(:first-child) {
@@ -588,14 +650,6 @@ header {
   color: #2196F3;
 }
 
-.contacts {
-  margin-top: 302px;
-}
-
-.contacts .contacts__item:not(:first-child) {
-  margin-top: 32px;
-}
-
 .contacts__link {
   transition-property: color;
   transition-duration: 250ms;
@@ -608,13 +662,13 @@ header {
   color: #2196F3;
 }
 
-.contacts__link--fw24px {
+.contacts__link--fz12-24px {
   font-size: 24px;
   line-height: 1.16;
   font-weight: 500;
 }
 
-.contacts__link--fw34px {
+.contacts__link--fz12-34px {
   font-size: 34px;
   line-height: 1.17;
   font-weight: 500;
