@@ -1,8 +1,18 @@
 .hero {
-   background-image: url('../../images/hero-background.jpg');
-   background-repeat: no-repeat;
-   background-size: cover;
-
+    background-image: url('../../images/herobackground/img\ overlay.png'), url('../../images/herobackground/hederBackgroundMin.jpg'), ;
+    background-size: cover;
+   @media screen and (min-width: 480px) {
+    background-image: url('../../images/herobackground/img\ overlay.png'), url('../../images/herobackground/hederBackgroundMin.jpg'), ;
+    background-size: cover;
+  }
+  @media screen and (min-width: 768px) {
+    background-image: url('../../images/herobackground/img\ overlay.png'), url('../../images/herobackground/hederBackgroundMiddle.jpg'), ;
+    background-size: cover;
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: url('../../images/herobackground/img\ overlay.png'), url('../../images/herobackground/hederBackgroundMax.jpg'), ;
+    background-size: cover;
+  }
 }
 .hero__container {
     padding: 58px 45px;
