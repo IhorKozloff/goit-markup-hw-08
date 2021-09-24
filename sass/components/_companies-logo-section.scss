@@ -1,8 +1,54 @@
 .clients {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
-        & li:not(:nth-child(n + 4)) {
-            margin-bottom: 30px;
-        }
+    justify-content: space-between;  
+}
+.clients li:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+
+.clients__link {
+    border: 1px solid ;
+    border-color: #AFB1B8;
+    border-radius: 4px;  
+    fill: #AFB1B8;
+    background-color: #FFFFFF;
+    @include dfcc;
+    padding: 16px 52px;
+    @include anim-p (border-color);
+    &:hover, &:focus {
+        border-color: #2196F3;
+    }
+    &:hover .clients__icon,
+    &:focus .clients__icon {
+        fill: #2196F3;
+    }
+}
+.clients__icon {
+    width: 106px;
+    height: 60px;
+    fill: auto;
+    @include anim-p (fill);
+}
+@media screen and (min-width: 480px) {
+    .clients li:nth-child(n + 5) {
+        margin-bottom: 0;
+    }
+}
+@media screen and (min-width: 768px) {
+    .clients__link {
+        padding: 16px 60px; 
+    }
+    .clients li:nth-child(n + 4) {
+        margin-bottom: 0;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .clients__link {
+        padding: 16px 32px; 
+    }
+    .clients li{
+        margin-bottom: 0px;
+    }
 }

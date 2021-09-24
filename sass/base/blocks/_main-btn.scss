@@ -3,7 +3,7 @@
     @include dfcc;
     width: 200px;
     height: 50px;
-    transform: scaleX(0.5);
+    transform: scale(0.3, 0.3);
     color: white;
     font-weight: bold;
     background-color: #2196F3;
@@ -24,9 +24,12 @@
         color:#000;
         background-color: #eb033d;
         font-weight: bolder;
-    }         
+    }   
+    @media screen and (min-width: 382px) {
+        transform: scale(0.5, 0.5);
+    }      
     @media screen and (min-width: 480px) {
-        transform: scaleX(1);
+        transform: scale(1, 1);
         
       }
 }
