@@ -257,7 +257,17 @@
             <h2>Наша команда</h2>
             <ul class="team">
                 <li class="team__item">
-                    <img src="./images/img-3.jpg" alt="мужчина_в_очках_дизайнер" class="team__photo">
+                   
+                    <picture>
+                        <source srcset="
+                            ./images/desktop/demyanenko-desktop-min.jpg 1x, 
+                            ./images/desktop/demyanenko-desktop-2x-min.jpg 2x" 
+                            media="(min-width:1200px)" 
+                        />
+                    
+                        <img src="./images/mobile/demyanenko-min.jpg" alt="мужчина_в_очках_дизайнер" class="team__photo">
+                    </picture>
+                                        
                     <div class="team__info-wrapper">
                         <p class="team__name">Игорь Демьяненко</p>
                         <p class="team__position">Product Designer</p>
