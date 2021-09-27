@@ -1,18 +1,20 @@
-// .team__item {
-//     width: 100%;
-// }
+.team__item {
+   width: 100%;
+}
 .team__item:not(:last-child) {
     margin-bottom: 30px;
 
 }
-// .team__photo {
-//     width: 100%;
+.team__photo {
+    width: 100%;
     
-// }
+}
 
 .team__info-wrapper {
     padding-bottom: 24px;
+    padding-top: 30px;
     background-color: #fff;
+   
     .team__name {
         @include txt-p(16px, 1.2, 500);
         text-align: center;
@@ -39,7 +41,7 @@
         justify-content: space-between;
     }
     .team__item {
-        // max-width: 354px;
+        max-width: 354px;
         &:nth-child(n + 3){
             margin-bottom: 0;
         }  
@@ -50,10 +52,14 @@
     .team {
         flex-direction: row;
         .team__item {
-            // width: 100%;
+            max-width: 270px;
              margin-bottom: 0;
             
         }
     }
+    .team__info-wrapper {
+        padding-bottom: 30px;
+    }   
+        
 }
 

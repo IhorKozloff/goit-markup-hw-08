@@ -41,11 +41,16 @@
                             <nav>
                                 <ul class="navigation">
                                     <li class="navigation__item">
-                                        <a href="#" class="navigation__link navigation__link--active">Студия</a>
+                                        <a href="#" class="navigation__link navigation__link--active">                        
+                                            Студия
+                                        </a>
                                     </li>
 
                                     <li class="navigation__item">
-                                        <a href="./portfolio.html" class="navigation__link">Портфолио</a>
+                                        <a href="./portfolio.html" class="navigation__link">
+                                            
+                                            Портфолио
+                                        </a>
                                     </li>
 
 
@@ -57,14 +62,18 @@
                         
                             <ul class="contacts">
                                 <li class="contacts__item">
-                                    <a href="tel:+380961111111" class="contacts__link contacts__link--fz12-34px">
-                                        
+                                    <a href="tel:+380961111111" class="contacts__link contacts__link--fz12-14-34px">
+                                        <svg class="contacts__item-icon-phone" width="10" height="14">
+                                            <use href="./images/sprite.svg#icon-phone"></use>
+                                        </svg>
                                         +38 096 111 11 11
                                     </a>
                                 </li>
                                 <li class="contacts__item">
-                                    <a href="mailto:info@devstudio.com" class="contacts__link contacts__link--fz12-24px">
-                                       
+                                    <a href="mailto:info@devstudio.com" class="contacts__link contacts__link--fz12-14-24px">
+                                        <svg class="contacts__item-icon-mail" width="14" height="10">
+                                            <use href="./images/sprite.svg#icon-mail"></use>
+                                        </svg>
                                         info@devstudio.com
                                     </a>
                                 </li>
@@ -229,20 +238,42 @@
             <h2>Чем мы занимаемся</h2>
             <ul class="busines">
                 <li class="busines__item">
-
-                    <img src="./images/box-1.jpg" alt="руки_на_клавиатуре" class="busines__img">
+                    <picture>
+                        <source srcset="
+                            ./images/box-1.jpg 1x, 
+                            ./images/desktop/hand-laptop-2x-min.jpg 2x" 
+                            media="(min-width:1200px)" 
+                        />
+                            <img src="./images/box-1.jpg" alt="руки_на_клавиатуре" class="busines__img">
+                    </picture>
+                    
                     <div class="block-busines-tittle">
                         <h3>Десктопные приложения</h3>
                     </div>
                 </li>
                 <li class="busines__item">
-                    <img src="./images/box-2.jpg" alt="руки_держат_пульт" class="busines__img">
+                    <picture>
+                        <source srcset="
+                            ./images/box-2.jpg 1x, 
+                            ./images/desktop/pylt-2x-min.jpg 2x" 
+                            media="(min-width:1200px)" 
+                        />
+                        <img src="./images/box-2.jpg" alt="руки_держат_пульт" class="busines__img">
+                    </picture>
+                    
                     <div class="block-busines-tittle">
                         <h3>Мобильные приложения</h3>
                     </div>
                 </li>
                 <li class="busines__item">
-                    <img src="./images/box-3.jpg" alt="руки_держат_планшет_с_палитрой" class="busines__img">
+                    <picture>
+                        <source srcset="
+                            ./images/box-3.jpg 1x, 
+                            ./images/desktop/gradient-2x-min.jpg 2x" 
+                            media="(min-width:1200px)" 
+                        />
+                        <img src="./images/box-3.jpg" alt="руки_держат_планшет_с_палитрой" class="busines__img">
+                    </picture>
                     <div class="block-busines-tittle">
                         <h3>Дизайнерские решения</h3>
                     </div>
@@ -263,6 +294,16 @@
                             ./images/desktop/demyanenko-desktop-min.jpg 1x, 
                             ./images/desktop/demyanenko-desktop-2x-min.jpg 2x" 
                             media="(min-width:1200px)" 
+                        />
+                        <source srcset="
+                            ./images/tablet/demyanenko-tablet-min.jpg 1x, 
+                            ./images/tablet/demyanenko-tablet-2x-min.jpg 2x" 
+                            media="(min-width:768px)" 
+                        />
+                        <source srcset="
+                            ./images/mobile/demyanenko-min.jpg 1x, 
+                            ./images/mobile/demyanenko-2x-min.jpg 2x" 
+                            media="(min-width:480px)" 
                         />
                     
                         <img src="./images/mobile/demyanenko-min.jpg" alt="мужчина_в_очках_дизайнер" class="team__photo">
@@ -304,7 +345,26 @@
                     </div>
                 </li>
                 <li class="team__item">
-                    <img src="./images/img-1.jpg" alt="женщина_в_очках_маркетолог" class="team__photo">
+                    <picture>
+                        <source srcset="
+                            ./images/desktop/repina-desktop-min.jpg 1x, 
+                            ./images/desktop/repina-desktop-2x-min.jpg 2x" 
+                            media="(min-width:1200px)" 
+                        />
+                        <source srcset="
+                            ./images/tablet/repina-tablet-min.jpg 1x, 
+                            ./images/tablet/repina-tablet-2x-min.jpg 2x" 
+                            media="(min-width:768px)" 
+                        />
+                        <source srcset="
+                            ./images/mobile/repina-min.jpg 1x, 
+                            ./images/mobile/repina-2x-min.jpg 2x" 
+                            media="(min-width:480px)" 
+                        />
+                    
+                        <img src="./images/mobile/repina-min.jpg" alt="мужчина_в_очках_дизайнер" class="team__photo">
+                    </picture>
+                    
                     <div class="team__info-wrapper">
                         <p class="team__name">Ольга Репина</p>
                         <p class="team__position">Frontend Developer</p>
@@ -341,7 +401,25 @@
                     </div>
                 </li>
                 <li class="team__item">
-                    <img src="./images/img-2.jpg" alt="мужчина_фронтэнд_разработчик" class="team__photo">
+                    <picture>
+                        <source srcset="
+                            ./images/desktop/tarasov-desktop-min.jpg 1x, 
+                            ./images/desktop/tarasov-desktop-2x-min.jpg 2x" 
+                            media="(min-width:1200px)" 
+                        />
+                        <source srcset="
+                            ./images/tablet/tarasov-tablet-min.jpg 1x, 
+                            ./images/tablet/tarasov-tablet-2x-min.jpg 2x" 
+                            media="(min-width:768px)" 
+                        />
+                        <source srcset="
+                            ./images/mobile/tarasov-min.jpg 1x, 
+                            ./images/mobile/tarasov-2x-min.jpg 2x" 
+                            media="(min-width:480px)" 
+                        />
+                    
+                        <img src="./images/mobile/tarasov-min.jpg" alt="мужчина_в_очках_дизайнер" class="team__photo">
+                    </picture>
                     <div class="team__info-wrapper">
                         <p class="team__name">Николай Тарасов</p>
                         <p class="team__position">Marketing</p>
@@ -381,7 +459,25 @@
                 
 
                 <li class="team__item">
-                    <img src="./images/img.jpg" alt="мужчина_в_очках_продактдизайнер" class="team__photo">
+                    <picture>
+                        <source srcset="
+                            ./images/desktop/ermakov-desktop-min.jpg 1x, 
+                            ./images/desktop/ermakov-desktop-2x-min.jpg 2x" 
+                            media="(min-width:1200px)" 
+                        />
+                        <source srcset="
+                            ./images/tablet/ermakov-tablet-min.jpg 1x, 
+                            ./images/tablet/ermakov-tablet-2x-min.jpg 2x" 
+                            media="(min-width:768px)" 
+                        />
+                        <source srcset="
+                            ./images/mobile/ermakov-min.jpg 1x, 
+                            ./images/mobile/ermakov-2x-min.jpg 2x" 
+                            media="(min-width:480px)" 
+                        />
+                    
+                        <img src="./images/mobile/ermakov-min.jpg" alt="мужчина_в_очках_дизайнер" class="team__photo">
+                    </picture>
                     <div class="team__info-wrapper">
                         <P class="team__name">Михаил Ермаков</P>
                         <p class="team__position">UI Designer</p>
