@@ -23,7 +23,6 @@ ul, li {
 }
 
 section {
-  background-color: pink;
   padding: 60px 15px;
 }
 
@@ -723,6 +722,10 @@ header {
   .hero {
     background-image: url("../../images/herobackground/img overlay.png"), url("../../images/herobackground/hederBackgroundMax.jpg");
     background-size: cover;
+  }
+  .hero .hero__container {
+    padding-top: 140px;
+    padding-bottom: 140px;
   }
 }
 
