@@ -2,6 +2,7 @@ header {
     width: 100%;
     margin: auto;
     border-bottom:1px solid #ECECEC;
+    
 }
 .header__container {
     padding: 10px 0;
@@ -24,36 +25,27 @@ header {
     color: $Dark-color;
 }
 
-.menu-overlay{
-    position: fixed;
-    background: rgba(47, 48, 58, 0.5);
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    @include anim-p (opacity);
-    z-index: 1;
-    pointer-events: none;
-    
-}
 
-.menu-overlay.invisible  {
-    &  .contacts-menu{
-        transform: translateX(50%);
-        }
-    opacity: 1;
-    pointer-events: inherit;
-}
 @media screen and (min-width: 768px) {
-    .menu-overlay {
-        opacity: 1;
-        position: static;
-        z-index: 0;
-        pointer-events: inherit;
+    .header__container {
+        padding: 0 0;
+    }
+    .header__logo {
+        margin-right: 88px;
     }
     .header__burger-menu-btn {
         display: none;
     }
 }
 
+@media screen and (min-width: 1200px) {
+    .header__container {
+        width: 1200px;
+        padding: 0 15px 0 15px;
+        justify-content: center;
+        
+    } 
+    .header__logo{
+        margin-right: 93px;
+    }
+}
