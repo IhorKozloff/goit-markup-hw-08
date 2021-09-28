@@ -1,35 +1,42 @@
 .hero {
-    background-image: url('../../images/herobackground/img\ overlay.png'), url('../../images/herobackground/hederBackgroundMin.jpg');
+    background-image: url('../../images/herobackground/img-overlay.png'), url('../../images/herobackground/hederBackgroundMin.jpg');
     background-position: center;
     background-size: cover;
-  //  @media screen and (min-width: 480px) {
-  //   background-image: url('../../images/herobackground/img\ overlay.png'), url('../../images/herobackground/hederBackgroundMin.jpg');
-  //   background-size: cover;
-  //   background-position: center;
-  // }
-  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    background-image: url('../../images/herobackground/img-overlay.png'), url('../../images/herobackground/background-mobile-2x-min.jpg');
-  }
-  @media screen and (min-width: 768px) {
-    background-image: url('../../images/herobackground/img-overlay.png'), url('../../images/herobackground/hederBackgroundMiddle.jpg');
-    
-  }
-  @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    background-image: url('../../images/herobackground/img-overlay.png'), url('../../images/herobackground/background-tablet-2x-min.jpg');
-   
-  }
-  @media screen and (min-width: 1200px) {
-    background-image: url('../../images/herobackground/img-overlay.png'), url('../../images/herobackground/hederBackgroundMax.jpg');
-    
-    .hero__container {
-      padding-top: 140px;
-      padding-bottom: 140px;
+
+    @media screen and (min-device-pixel-ratio: 2),
+          screen and (-webkit-min-device-pixel-ratio: 2),
+          screen and (min-resolution: 192dpi), 
+          screen and (min-resolution: 2dppx) {
+      background-image: url('../../images/herobackground/img-overlay.png'), url('../../images/herobackground/background-mobile-2x-min.jpg');
     }
-  }
-  @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    background-image: url('../../images/herobackground/img-overlay.png'), url('../../images/herobackground/background-desktop-2x-min.jpg');
+    @media screen and (min-width: 768px) {
+      background-image: url('../../images/herobackground/img-overlay.png'), url('../../images/herobackground/hederBackgroundMiddle.jpg');
+      
+    }
+    @media screen and (min-width: 768px),
+          screen and (min-device-pixel-ratio: 2),
+          screen and (-webkit-min-device-pixel-ratio: 2),
+          screen and (min-resolution: 192dpi), 
+          screen and (min-resolution: 2dppx) {
+      background-image: url('../../images/herobackground/img-overlay.png'), url('../../images/herobackground/background-tablet-2x-min.jpg');
     
-  }
+    }
+    @media screen and (min-width: 1200px) {
+      background-image: url('../../images/herobackground/img-overlay.png'), url('../../images/herobackground/hederBackgroundMax.jpg');
+      
+      .hero__container {
+        padding-top: 140px;
+        padding-bottom: 140px;
+      }
+    }
+    @media screen and (min-width: 1200px),
+          screen and (min-device-pixel-ratio: 2),
+          screen and (-webkit-min-device-pixel-ratio: 2),
+          screen and (min-resolution: 192dpi), 
+          screen and (min-resolution: 2dppx) {
+      background-image: url('../../images/herobackground/img-overlay.png'), url('../../images/herobackground/background-desktop-2x-min.jpg');
+      
+    }
 }
 .hero__container {
     padding: 58px 45px;
