@@ -458,10 +458,11 @@ header {
 
 @media screen and (min-width: 768px) {
   .header__container {
-    padding: 0 0;
+    padding: 0 0 10px 0;
   }
   .header__logo {
     margin-right: 88px;
+    margin-top: 26px;
   }
   .header__burger-menu-btn {
     display: none;
@@ -471,10 +472,11 @@ header {
 @media screen and (min-width: 1200px) {
   .header__container {
     width: 1200px;
-    padding: 0 15px 0 15px;
+    padding: 0 15px 25px 15px;
     justify-content: center;
   }
   .header__logo {
+    margin-top: 24px;
     margin-right: 93px;
   }
 }
@@ -512,12 +514,8 @@ header {
   margin-right: 8px;
 }
 
-.contacts__item-icon-phone
-.navigation__item:not(:first-child) {
-  margin-top: 38px;
-}
-
 .navigation__link {
+  position: relative;
   font-size: 40px;
   line-height: 1.17;
   font-weight: 500;
@@ -533,6 +531,31 @@ header {
 
 .navigation__link--active {
   color: #2196F3;
+}
+
+.navigation__link--active::after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #2196F3;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateY(26px);
+  opacity: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation__link--active::after {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .navigation__link--active::after {
+    transform: translateY(28px);
+  }
 }
 
 .contacts__item-icon-phone,
@@ -583,6 +606,7 @@ header {
 .social-links {
   margin-top: 64px;
   display: flex;
+  flex-flow: row wrap;
 }
 
 .social-links li {
@@ -612,10 +636,9 @@ header {
   fill: #2196F3;
 }
 
-@media screen and (min-width: 480px) {
-  .navigation__item:not(:last-child) {
-    margin-bottom: 32px;
-  }
+.navigation__item:not(:last-child),
+.contacts__item:not(:last-child) {
+  margin-bottom: 32px;
 }
 
 @media screen and (min-width: 768px) {
@@ -632,32 +655,36 @@ header {
   .contacts-menu .contacts-menu__close-btn, .contacts-menu .social-links {
     display: none;
   }
-  .navigation {
-    display: flex;
+  nav {
     margin-top: 32px;
   }
-  .navigation .navigation__item {
+  .navigation {
+    display: flex;
+  }
+  .navigation__item {
     margin-top: 0;
   }
-  .navigation .navigation__item:not(:last-child) {
+  .navigation__item:not(:last-child) {
+    margin-bottom: 0;
     margin-right: 50px;
   }
-  .navigation .navigation__link {
+  .navigation__link {
     font-size: 14px;
     line-height: 1.17;
     font-weight: 500;
   }
-  .contacts {
+  .contacts-wrapper {
     margin-top: 21px;
+  }
+  .contacts {
     display: block;
   }
-  .contacts .contacts__link--fz12-14-34px,
-  .contacts .contacts__link--fz12-14-24px {
-    font-size: 12px;
+  .contacts__item:not(:last-child) {
+    margin-bottom: 8px;
   }
-  .contacts .contacts__link--fz12-14-34px:not(:first-child),
-  .contacts .contacts__link--fz12-14-24px:not(:first-child) {
-    margin-top: 10px;
+  .contacts__link--fz12-14-34px,
+  .contacts__link--fz12-14-24px {
+    font-size: 12px;
   }
   .contacts__item-icon-mail,
   .contacts__item-icon-phone {
@@ -666,21 +693,21 @@ header {
 }
 
 @media screen and (min-width: 1200px) {
+  .contacts-wrapper {
+    margin-top: 32px;
+  }
   .contacts {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 32px;
-  }
-  .contacts .contacts__link--fz12-14-34px,
-  .contacts .contacts__link--fz12-14-24px {
-    font-size: 14px;
-  }
-  .contacts__item:not(:first-child) {
-    margin-top: 0;
   }
   .contacts__item:not(:last-child) {
+    margin-bottom: 0;
     margin-right: 30px;
+  }
+  .contacts__link--fz12-14-34px,
+  .contacts__link--fz12-14-24px {
+    font-size: 14px;
   }
   .contacts__item-icon-mail {
     width: 16px;
@@ -697,31 +724,41 @@ header {
 
 .hero {
   background-image: url("../../images/herobackground/img overlay.png"), url("../../images/herobackground/hederBackgroundMin.jpg");
+  background-position: center;
   background-size: cover;
 }
 
-@media screen and (min-width: 480px) {
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: url("../../images/herobackground/img overlay.png"), url("../../images/herobackground/hederBackgroundMin.jpg");
-    background-size: cover;
+    background-image: url("../../images/herobackground/img overlay.png"), url("../../images/herobackground/background-mobile-2x-min.jpg");
   }
 }
 
 @media screen and (min-width: 768px) {
   .hero {
     background-image: url("../../images/herobackground/img overlay.png"), url("../../images/herobackground/hederBackgroundMiddle.jpg");
-    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../../images/herobackground/img overlay.png"), url("../../images/herobackground/background-tablet-2x-min.jpg");
   }
 }
 
 @media screen and (min-width: 1200px) {
   .hero {
     background-image: url("../../images/herobackground/img overlay.png"), url("../../images/herobackground/hederBackgroundMax.jpg");
-    background-size: cover;
   }
   .hero .hero__container {
     padding-top: 140px;
     padding-bottom: 140px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../../images/herobackground/img overlay.png"), url("../../images/herobackground/background-desktop-2x-min.jpg");
   }
 }
 

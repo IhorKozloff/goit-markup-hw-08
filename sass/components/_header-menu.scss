@@ -19,7 +19,6 @@
         opacity: 1;
     }
 }
-
 .contacts {
 
     &:not(:first-child) {
@@ -29,12 +28,8 @@
 .contacts__item-icon-mail, .contacts__item-icon-phone {
     margin-right: 8px;
 }
-
-.contacts__item-icon-phone
-.navigation__item:not(:first-child) {
-    margin-top: 38px;
-}
 .navigation__link {
+    position: relative;
     @include txt-p (40px, 1.17);
     letter-spacing: 0.02em;
     @include anim-p (color);
@@ -44,16 +39,31 @@
 }
 .navigation__link--active {
     color: $Aqua-color;
+    &::after {
+        content: '';
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color:$Aqua-color;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: translateY(26px);
+        opacity: 0;
+        @media screen and (min-width: 768px) {
+            opacity: 1;
+        }
+        @media screen and (min-width: 1200px) {
+            transform: translateY(28px);  
+        }
+
+    }
 }
-
-
 .contacts__item-icon-phone, 
 .contacts__item-icon-mail {
     @include anim-p (fill);
     display: none;
 }
-
-
 .contacts__link {
     &:hover, &:focus {
         color: $Aqua-color; 
@@ -66,27 +76,21 @@
     &:hover .contacts__item-icon-mail,
     &:focus .contacts__item-icon-mail {
         fill: $Aqua-color; 
-    }
-    
+    }  
 }
 .contacts__link--fz12-14-24px{
     @include txt-p (24px, 1.16);
 }
-
-
-
 .contacts__link--fz12-14-34px {
     @include txt-p (34px, 1.17);
 }
 .contacts__link--fw18px {
     @include txt-p (18px, 1.22);
 }
-
-
-
 .social-links {
     margin-top: 64px;
     display: flex;
+    flex-flow: row wrap;
     & li {
         padding-right: 10px;
         margin-right: 10px;
@@ -108,11 +112,11 @@
         fill: $Aqua-color;
     }
 }
-@media screen and (min-width: 480px) {
-    .navigation__item:not(:last-child) {
-        margin-bottom: 32px;
-    }
+.navigation__item:not(:last-child),
+.contacts__item:not(:last-child) {
+    margin-bottom: 32px;
 }
+
 @media screen and (min-width: 768px) {
     .contacts-menu {
         flex-direction: row;
@@ -125,59 +129,57 @@
         justify-content: space-between;
         .contacts-menu__close-btn, .social-links {
             display: none;
-        }
+        }       
     }
-   
-    .navigation {
-        display: flex;
+    nav {
         margin-top: 32px;
-        .navigation__item {
-            margin-top: 0;            
-        }
-        .navigation__item:not(:last-child) {
-            margin-right: 50px
-        }
-       .navigation__link {
-            @include txt-p (14px, 1.17);
-            
-        }
     }
-    .contacts {
-        margin-top: 21px;
-        display: block;
-        .contacts__link--fz12-14-34px,
-        .contacts__link--fz12-14-24px {
-            font-size: 12px;
-            &:not(:first-child) {
-                margin-top: 10px;
-            }
-        } 
-        
-        
+    .navigation {
+        display: flex;      
+    }
+    .navigation__item {
+        margin-top: 0;
+        &:not(:last-child) {
+            margin-bottom: 0;
+            margin-right: 50px;
+        }            
+    }
+    .navigation__link {
+        @include txt-p (14px, 1.17);
     }  
+    .contacts-wrapper {
+        margin-top: 21px;
+    }
+    .contacts {        
+        display: block;      
+    }  
+    .contacts__item:not(:last-child) {
+        margin-bottom: 8px;
+    }
+    .contacts__link--fz12-14-34px,
+    .contacts__link--fz12-14-24px {
+         font-size: 12px;
+    }   
     .contacts__item-icon-mail,
     .contacts__item-icon-phone {
         display: inline-block;
     }
 }
 @media screen and (min-width: 1200px) {
+    .contacts-wrapper {
+        margin-top: 32px;
+    }
     .contacts {
-       @include dfcc;
-       margin-top: 32px;
-        .contacts__link--fz12-14-34px,
-        .contacts__link--fz12-14-24px {
-            font-size: 14px;
-        } 
-   }
-   .contacts__item {
-       &:not(:first-child) {
-           margin-top: 0;
-       }
-       &:not(:last-child) {
-            margin-right: 30px;
-        }
-   }
-   
+       @include dfcc;   
+    }
+    .contacts__item:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 30px;
+    }
+   .contacts__link--fz12-14-34px,
+   .contacts__link--fz12-14-24px {
+        font-size: 14px;
+    } 
    .contacts__item-icon-mail {
        width: 16px;
        height: 12px;
@@ -189,6 +191,5 @@
        height: 16px;
        transform: translateY(3px);
    }
-   
 }
 
