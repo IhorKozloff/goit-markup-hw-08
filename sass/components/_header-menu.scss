@@ -94,9 +94,13 @@
     & li {
         padding-right: 10px;
         margin-right: 10px;
+        
     }
     & li:not(:last-child) {
         border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+    & li a {
+        color: $Aqua-color;
     }
 }
 .contacts-menu__close-btn {
@@ -151,10 +155,14 @@
         margin-top: 21px;
     }
     .contacts {        
-        display: block;      
+        display: flex;
+        flex-direction: column-reverse;      
     }  
-    .contacts__item:not(:last-child) {
+    .contacts__item:not(:first-child) {
         margin-bottom: 8px;
+    }
+    .contacts__item:not(:last-child) {
+        margin-bottom: 0;
     }
     .contacts__link--fz12-14-34px,
     .contacts__link--fz12-14-24px {
@@ -170,10 +178,12 @@
         margin-top: 32px;
     }
     .contacts {
-       @include dfcc;   
+       flex-direction: row-reverse; 
     }
     .contacts__item:not(:last-child) {
         margin-bottom: 0;
+    }
+    .contacts__item:not(:first-child){
         margin-right: 30px;
     }
    .contacts__link--fz12-14-34px,

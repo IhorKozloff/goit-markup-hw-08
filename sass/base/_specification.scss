@@ -25,8 +25,12 @@ ul, li {
 }
 
 section {
-    // background-color: pink;
+    background-color: pink;
     padding: 60px 15px;
+    @media screen and (min-width: 1200px){
+        padding-top: 94px;
+        padding-bottom: 94px;
+      }
     
 }
 .container {
@@ -69,15 +73,19 @@ h1 {
     
 }
 h2 { 
-    @include txt-p (36px, 1.2, bold);
-    text-align: center;
-    margin-bottom: 30px;
-
+    @include txt-p (28px, 1.17, bold);
+        text-align: center;
+        margin-bottom: 30px;
+    @media screen and (min-width: 1200px) {
+        @include txt-p (36px, 1.2, bold); 
+        margin-bottom: 50px;  
+    }
+    
 }
 h3 {
     @include txt-p (14px, 1.1, bold);
-    text-transform: uppercase;
-    text-align: center;
+        text-transform: uppercase;
+        text-align: center;
     
 }
 button {

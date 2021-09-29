@@ -103,19 +103,19 @@
     }
   }
   @media screen and (min-width: 768px) {
-      .tabs {
-          justify-content: center;
-          & li:nth-child(n + 4) {
-                margin-top: 0px;
-            }
-      }
+    .tabs {
+        justify-content: center;
+        & li:nth-child(n + 4) {
+            margin-top: 0px;
+        }
+    }
     .galarry {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
-        .gallary__item {
-            max-width: 354px;
-        }
+    }
+    .gallary__item {
+        max-width: 354px;
     }
     
   }
@@ -123,8 +123,8 @@
 
     .gallary__item {
         max-width: 370px;
-       
-    }
-    
-    
+        &:nth-child(n + 7) {
+            margin-bottom: 0;
+        }
+    } 
   }
