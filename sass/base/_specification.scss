@@ -70,6 +70,11 @@ h1 {
         @include txt-p (26px, 1.6, 900); 
         letter-spacing: 0.06em; 
     }
+    @media screen and (min-width: 1200px) {
+        @include txt-p (42px, 1.36, 900); 
+        letter-spacing: 0.06em; 
+    }
+
     
 }
 h2 { 

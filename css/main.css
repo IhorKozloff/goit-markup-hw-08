@@ -89,6 +89,15 @@ h1 {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 42px;
+    line-height: 1.36;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+  }
+}
+
 h2 {
   font-size: 28px;
   line-height: 1.17;
@@ -765,7 +774,7 @@ header {
   }
 }
 
-@media screen and (min-width: 768px), (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(27, 27, 29, 0.4)), url("../images/herobackground/background-tablet-2x-min.jpg");
   }
@@ -781,7 +790,7 @@ header {
   }
 }
 
-@media screen and (min-width: 1200px), (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/herobackground/background-desktop-2x-min.jpg");
   }

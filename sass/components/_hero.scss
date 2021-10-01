@@ -10,12 +10,12 @@
     }
     @media screen and (min-width: 768px) {
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/herobackground/hederBackgroundMiddle.jpg');
+      @media screen and (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(27, 27, 29, 0.4)), url('../images/herobackground/background-tablet-2x-min.jpg');
       
+      }
     }
-    @media screen and (min-width: 768px), (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(27, 27, 29, 0.4)), url('../images/herobackground/background-tablet-2x-min.jpg');
     
-    }
     @media screen and (min-width: 1200px) {
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/herobackground/hederBackgroundMax.jpg');
       
@@ -23,11 +23,12 @@
         padding-top: 140px;
         padding-bottom: 140px;
       }
+      @media screen and (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/herobackground/background-desktop-2x-min.jpg');
+        
+      }
     }
-    @media screen and (min-width: 1200px), (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/herobackground/background-desktop-2x-min.jpg');
-      
-    }
+    
 }
 
 
